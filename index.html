@@ -4,111 +4,70 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Monk Mode</title>
+<title>Discipline Pro</title>
 
 <style>
 
 body{
-font-family: Arial;
-background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
+}
+
+header{
 padding:20px;
-}
-
-h1{
-font-size:32px;
-margin-bottom:20px;
-}
-
-.card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-padding:20px;
-margin:12px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-button{
-background:#00ff9c;
-border:none;
-padding:12px 20px;
-border-radius:10px;
-font-size:16px;
+font-size:28px;
 font-weight:bold;
 }
 
-.progress{
-height:10px;
-background:#333;
+.container{
+padding:15px;
+}
+
+.card{
+background:rgba(255,255,255,0.07);
 border-radius:20px;
+padding:20px;
+margin:15px;
+backdrop-filter:blur(12px);
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.progress{
+height:12px;
+background:#333;
+border-radius:30px;
 overflow:hidden;
 margin-top:10px;
 }
 
 .progress-bar{
 height:100%;
-width:40%;
-background:#00ff9c;
+width:50%;
+background:linear-gradient(90deg,#00ff9c,#00c3ff);
 }
 
-</style>
-
-</head>
-
-<body>
-
-<h1>⚔️ Discipline App</h1>
-
-<div class="card">
-<h3>🔥 Discipline Progress</h3>
-<div class="progress">
-<div class="progress-bar"></div>
-</div>
-</div>
-
-<div class="card">
-<h3>📅 Azi</h3>
-
-<p>16:30 – teme</p>
-<p>17:30 – sală / alergare</p>
-<p>20:00 – relax</p>
-<p>22:30 – somn</p>
-
-</div>
-
-<div class="card">
-<h3>💧 Apă</h3>
-<p>bea apă la fiecare 2 ore</p>
-</div>
-
-<div class="card">
-<h3>🏋️ Sala</h3>
-<p>Luni – piept</p>
-<p>Miercuri – spate</p>
-<p>Vineri – picioare</p>
-</div>
-
-<button onclick="notif()">Activează notificări</button>
-
-<script>
-
-function notif(){
-
-Notification.requestPermission().then(function(p){
-
-if(p==="granted"){
-alert("Notificările sunt active")
+.waterbtn{
+background:#00c3ff;
+border:none;
+padding:10px 15px;
+border-radius:10px;
+color:white;
+font-weight:bold;
+margin-top:10px;
 }
 
-})
-
+.task{
+padding:8px;
+border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
-</script>
+.timer{
+font-size:30px;
+margin-top:10px;
+}
 
-</body>
-
-</html>
-
+button{
+background:linear-gradient(90deg
