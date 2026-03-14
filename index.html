@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discipline App</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.task{
+background:#222;
+margin:10px;
+padding:15px;
+border-radius:10px;
+}
+
+button{
+background:#4CAF50;
+border:none;
+padding:12px;
+border-radius:8px;
+color:white;
+font-size:16px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Discipline App</h1>
+
+<div class="task">07:00 – Trezire</div>
+<div class="task">15:30 – Teme</div>
+<div class="task">17:00 – Sală / Alergare</div>
+<div class="task">18:30 – Prieteni</div>
+<div class="task">22:30 – Somn</div>
+<div class="task">💧 Bea apă la fiecare 2 ore</div>
+
+<button onclick="enable()">Activează notificări</button>
+
+<script>
+
+function enable(){
+
+Notification.requestPermission().then(function(permission){
+
+if(permission === "granted"){
+
+alert("Notificările sunt activate!")
+
+}
+
+})
+
+}
+
+</script>
+
+</body>
+</html>
