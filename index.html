@@ -11,63 +11,72 @@
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+background:linear-gradient(135deg,#141E30,#243B55);
 color:white;
 text-align:center;
 }
 
 header{
 padding:20px;
-font-size:28px;
+font-size:30px;
 font-weight:bold;
-}
-
-.container{
-padding:15px;
 }
 
 .card{
-background:rgba(255,255,255,0.07);
-border-radius:20px;
+background:rgba(255,255,255,0.08);
 padding:20px;
-margin:15px;
-backdrop-filter:blur(12px);
-box-shadow:0 15px 40px rgba(0,0,0,0.4);
-}
-
-.progress{
-height:12px;
-background:#333;
-border-radius:30px;
-overflow:hidden;
-margin-top:10px;
-}
-
-.progress-bar{
-height:100%;
-width:50%;
-background:linear-gradient(90deg,#00ff9c,#00c3ff);
-}
-
-.waterbtn{
-background:#00c3ff;
-border:none;
-padding:10px 15px;
-border-radius:10px;
-color:white;
-font-weight:bold;
-margin-top:10px;
-}
-
-.task{
-padding:8px;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-.timer{
-font-size:30px;
-margin-top:10px;
+margin:20px;
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
 }
 
 button{
-background:linear-gradient(90deg
+background:#00ff9c;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>🔥 Discipline Pro</header>
+
+<div class="card">
+<h2>Program Azi</h2>
+<p>16:30 – Teme</p>
+<p>17:30 – Sală / Alergare</p>
+<p>19:30 – Relax</p>
+<p>22:30 – Somn</p>
+</div>
+
+<div class="card">
+<h2>💧 Apă</h2>
+<p id="water">0 / 8 pahare</p>
+<button onclick="drink()">Am băut apă</button>
+</div>
+
+<div class="card">
+<h2>🏋️ Sală</h2>
+<p>Luni – Piept</p>
+<p>Miercuri – Spate</p>
+<p>Vineri – Picioare</p>
+</div>
+
+<script>
+
+let water=0
+
+function drink(){
+water++
+document.getElementById("water").innerText=water+" / 8 pahare"
+}
+
+</script>
+
+</body>
+</html>
