@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Discipline App</title>
+
+<title>Monk Mode</title>
 
 <style>
 
 body{
 font-family: Arial;
-background:#111;
+background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:white;
 text-align:center;
-padding:30px;
+padding:20px;
 }
 
-.task{
-background:#222;
-margin:10px;
-padding:15px;
-border-radius:10px;
+h1{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:20px;
+margin:12px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 button{
-background:#4CAF50;
+background:#00ff9c;
 border:none;
-padding:12px;
-border-radius:8px;
-color:white;
+padding:12px 20px;
+border-radius:10px;
 font-size:16px;
+font-weight:bold;
+}
+
+.progress{
+height:10px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress-bar{
+height:100%;
+width:40%;
+background:#00ff9c;
 }
 
 </style>
@@ -36,27 +59,47 @@ font-size:16px;
 
 <body>
 
-<h1>Discipline App</h1>
+<h1>⚔️ Discipline App</h1>
 
-<div class="task">07:00 – Trezire</div>
-<div class="task">15:30 – Teme</div>
-<div class="task">17:00 – Sală / Alergare</div>
-<div class="task">18:30 – Prieteni</div>
-<div class="task">22:30 – Somn</div>
-<div class="task">💧 Bea apă la fiecare 2 ore</div>
+<div class="card">
+<h3>🔥 Discipline Progress</h3>
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+</div>
 
-<button onclick="enable()">Activează notificări</button>
+<div class="card">
+<h3>📅 Azi</h3>
+
+<p>16:30 – teme</p>
+<p>17:30 – sală / alergare</p>
+<p>20:00 – relax</p>
+<p>22:30 – somn</p>
+
+</div>
+
+<div class="card">
+<h3>💧 Apă</h3>
+<p>bea apă la fiecare 2 ore</p>
+</div>
+
+<div class="card">
+<h3>🏋️ Sala</h3>
+<p>Luni – piept</p>
+<p>Miercuri – spate</p>
+<p>Vineri – picioare</p>
+</div>
+
+<button onclick="notif()">Activează notificări</button>
 
 <script>
 
-function enable(){
+function notif(){
 
-Notification.requestPermission().then(function(permission){
+Notification.requestPermission().then(function(p){
 
-if(permission === "granted"){
-
-alert("Notificările sunt activate!")
-
+if(p==="granted"){
+alert("Notificările sunt active")
 }
 
 })
@@ -66,4 +109,6 @@ alert("Notificările sunt activate!")
 </script>
 
 </body>
+
 </html>
+
